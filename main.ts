@@ -50,6 +50,7 @@ basic.forever(function () {
         action = "Z"
     } else if (action == "C") {
         comment.comment("Insert C-Button Action Between These Comments")
+        wuKong.setAllMotor(0, 0)
         comment.comment("Insert C-Button Action Between These Comments")
         action = "Z"
     } else if (action == "D") {
@@ -59,11 +60,12 @@ basic.forever(function () {
         action = "Z"
     } else if (action == "E") {
         comment.comment("Insert E-Button Action Between These Comments")
-        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S0, 0)
+        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S0, 20)
         comment.comment("Insert E-Button Action Between These Comments")
         action = "Z"
     } else if (action == "F") {
         comment.comment("Insert F-Button Action Between These Comments")
+        music.playSoundEffect(music.builtinSoundEffect(soundExpression.giggle), SoundExpressionPlayMode.InBackground)
         comment.comment("Insert F-Button Action Between These Comments")
         action = "Z"
     } else {
