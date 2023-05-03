@@ -38,6 +38,7 @@ basic.showString("R")
 basic.forever(function () {
     if (action == "A") {
         comment.comment("Insert A-Button Action Between These Comments")
+        music.playSoundEffect(music.builtinSoundEffect(soundExpression.giggle), SoundExpressionPlayMode.InBackground)
         comment.comment("Insert A-Button Action Between These Comments")
         action = "Z"
     } else if (action == "B") {
@@ -50,7 +51,12 @@ basic.forever(function () {
         action = "Z"
     } else if (action == "C") {
         comment.comment("Insert C-Button Action Between These Comments")
-        wuKong.setAllMotor(0, 0)
+        wuKong.setAllMotor(-50, 50)
+        basic.pause(100)
+        wuKong.stopAllMotor()
+        wuKong.setAllMotor(50, -50)
+        basic.pause(100)
+        wuKong.stopAllMotor()
         comment.comment("Insert C-Button Action Between These Comments")
         action = "Z"
     } else if (action == "D") {
@@ -65,7 +71,12 @@ basic.forever(function () {
         action = "Z"
     } else if (action == "F") {
         comment.comment("Insert F-Button Action Between These Comments")
-        music.playSoundEffect(music.builtinSoundEffect(soundExpression.giggle), SoundExpressionPlayMode.InBackground)
+        wuKong.setAllMotor(50, -50)
+        basic.pause(100)
+        wuKong.stopAllMotor()
+        wuKong.setAllMotor(-50, 50)
+        basic.pause(100)
+        wuKong.stopAllMotor()
         comment.comment("Insert F-Button Action Between These Comments")
         action = "Z"
     } else {
